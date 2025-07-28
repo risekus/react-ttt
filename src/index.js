@@ -1,12 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client'; // 또는 ReactDOM from 'react-dom';
-import App from './App';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import AppOriginal from './AppOriginal';
+import App from './App'; // App 컴포넌트가 정의된 파일
 import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <StrictMode>
+    {/* <AppOriginal /> */}
     <App />
-    <App />
-  </React.StrictMode>
+  </StrictMode>
 );
